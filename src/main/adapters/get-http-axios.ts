@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GetHttp } from '../http/protocols/get-http'
+import { GetHttp } from '../../http/protocols/get-http'
 
 export class Get implements GetHttp {
   async get (url: string): Promise<any | any[]> {
