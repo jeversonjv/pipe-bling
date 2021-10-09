@@ -1,4 +1,4 @@
-import { GetHttp } from '../../Http/protocols/get-http'
+import { GetHttp } from '../../http/protocols/get-http'
 import { Deal } from './protocols/deal'
 
 export class GetDeals {
