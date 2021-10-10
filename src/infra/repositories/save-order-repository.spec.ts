@@ -24,7 +24,7 @@ describe('SaveOrderRepository', () => {
     await MongoHelper.close()
   })
 
-  it('Should insert a order from deal into collection orders group by date', async () => {
+  test('Should insert a order from deal into collection orders group by date', async () => {
     const { sut } = makeSut()
 
     ordersCollection = await MongoHelper.getCollection('orders')
