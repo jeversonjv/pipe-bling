@@ -4,7 +4,7 @@ import { setupRoutes } from './routes/setup-routes'
 import dotenv from 'dotenv'
 import path from 'path'
 import cors from 'cors'
-import { GetDealsSaveOrders } from './workers/get-deals-save-orders'
+import { setupWorker } from './workers/setup-workers'
 
 dotenv.config({ path: path.join(__dirname, '/../../.env') })
 
@@ -13,8 +13,8 @@ MongoHelper.connect(process.env.MONGO_URL)
     const app = express()
     app.use(cors())
     setupRoutes(app)
-    void GetDealsSaveOrders()
-    app.listen(process.env.port ?? 8080, () => console.log('Server is running!'))
+    setupWorker()
+    app.listen(process.env.PORT ?? 8080, () => console.log('Server is running!'))
   })
   .catch((e) => {
     console.log(e)
