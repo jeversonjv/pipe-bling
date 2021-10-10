@@ -1,4 +1,4 @@
-import { Json2Xml } from '../../helpers/protocols/json-2-xml'
+import { Json2Xml } from '../../utils/protocols/json-2-xml'
 import { PostHttp } from '../../http/protocols/post-http'
 import { Deal } from '../pipedrive/protocols/deal'
 

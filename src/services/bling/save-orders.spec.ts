@@ -1,8 +1,8 @@
 import { SaveOrders } from './save-orders'
 import { PostHttp } from '../../http/protocols/post-http'
 import { Deal } from '../pipedrive/protocols/deal'
-import { Json2XmlHelper } from '../../helpers/json-2-xml-helper'
-import { Json2Xml } from '../../helpers/protocols/json-2-xml'
+import { Json2XmlHelper } from '../../utils/json-2-xml-helper'
+import { Json2Xml } from '../../utils/protocols/json-2-xml'
 
 interface SutTypes {
   sut: SaveOrders
