@@ -23,7 +23,7 @@ Para garantir a consistência da aplicação e também servir como documentaçã
 
 ## 🛠 Ferramentas
 
-- [NestJS](https://nestjs.com/)
+- [NodeJS](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [MongoDB](https://www.mongodb.com/)
 - [Jest](https://jestjs.io/pt-BR/)
