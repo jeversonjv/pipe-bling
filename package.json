@@ -4,6 +4,7 @@
   "description": "Integração entre o CRM Pipedrive e o ERP Bling",
   "main": "index.js",
   "scripts": {
+    "start": "npx ts-node ./src/main/index.ts",
     "test": "jest --runInBand --passWithNoTests",
     "test:unit": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests ./src"
