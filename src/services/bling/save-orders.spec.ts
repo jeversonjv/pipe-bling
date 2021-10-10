@@ -1,8 +1,8 @@
 import { SaveOrders } from './save-orders'
 import { PostHttp } from '../../http/protocols/post-http'
-import { Deal } from '../pipedrive/protocols/deal'
 import { Json2XmlHelper } from '../../utils/json-2-xml-helper'
 import { Json2Xml } from '../../utils/protocols/json-2-xml'
+import makeFakeDeal from '../../utils/make-fake-deal'
 
 interface SutTypes {
   sut: SaveOrders
@@ -10,18 +10,6 @@ interface SutTypes {
 
 const makeJson2XmlHelper = (): Json2Xml => {
   return new Json2XmlHelper()
-}
-
-const makeFakeDeal = (): Deal => {
-  const deal = {
-    id: 1,
-    title: 'Any Deal',
-    value: 70,
-    personName: 'Any Person',
-    dateWon: 'Any Date',
-    status: 'Any status'
-  }
-  return deal
 }
 
 const makePostHttp = (): PostHttp => {
