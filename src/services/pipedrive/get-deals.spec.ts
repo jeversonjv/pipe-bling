@@ -38,12 +38,14 @@ describe('GetDeals Test', () => {
     const { sut } = makeSut()
 
     const dealReturnedService = {
-      id: 1,
-      value: 70,
-      title: 'Any Deal',
-      person_name: 'Any Person',
-      won_time: 'Any Date',
-      status: 'Any status'
+      data: [{
+        id: 1,
+        value: 70,
+        title: 'Any Deal',
+        person_name: 'Any Person',
+        won_time: 'Any Date',
+        status: 'Any status'
+      }]
     }
 
     const deal: Deal = {
@@ -55,7 +57,7 @@ describe('GetDeals Test', () => {
       status: 'Any status'
     }
 
-    jest.spyOn(sut, 'callService').mockResolvedValueOnce([dealReturnedService])
+    jest.spyOn(sut, 'callService').mockResolvedValueOnce(dealReturnedService)
 
     const result = await sut.getData()
     expect(result).toEqual([deal])

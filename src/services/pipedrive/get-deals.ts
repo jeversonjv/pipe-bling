@@ -13,14 +13,14 @@ export class GetDeals {
   }
 
   async callService (): Promise<any | any[]> {
-    const urlApi = `${this.url}/api/v1/deals?status=won&api_token=${this.apiKey}`
+    const urlApi = `${this.url}/deals?status=won&api_token=${this.apiKey}`
     return await this.getHttp.get(urlApi)
   }
 
   async getData (): Promise<Deal[]> {
     try {
       const deals = await this.callService()
-      const result = deals.map((deal) => {
+      const result = deals.data.map((deal) => {
         return {
           id: deal.id,
           title: deal.title,

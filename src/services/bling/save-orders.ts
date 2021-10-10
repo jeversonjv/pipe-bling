@@ -22,7 +22,7 @@ export class SaveOrders {
 
   async callService (deal: Deal): Promise<any> {
     const encodedUri = encodeURI(
-      `${this.url}/pedido/json/?xml=${this.getStructXml(deal)}&apiKey=${this.apiKey}`
+      `${this.url}/pedido/json/?xml=${this.getStructXml(deal)}&apikey=${this.apiKey}`
     )
     const result = await this.postHttp.post(encodedUri)
 
@@ -33,7 +33,7 @@ export class SaveOrders {
 
   async saveOrder (deal: Deal): Promise<number> {
     const result = await this.callService(deal)
-    return result.pedidos[0].pedido.idPedido
+    return result.pedidos ? result.pedidos[0].pedido.idPedido : null
   }
 
   private getStructXml (deal: Deal): string {
